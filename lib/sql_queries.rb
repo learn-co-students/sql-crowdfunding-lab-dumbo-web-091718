@@ -1,5 +1,5 @@
 # Write your sql queries in this file in the appropriate method like the example below:
-#
+
 # def select_category_from_projects
 # "SELECT category FROM projects;"
 # end
@@ -10,20 +10,18 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
 # "Write your SQL query Here" # describe what we want: SELECT projects.title, SUM(pledges.amount)
 'SELECT projects.title, SUM(pledges.amount) FROM pledges JOIN projects ON projects.id = pledges.project_id GROUP BY projects.title ORDER BY projects.title;'
 
-
 #  QUERY 1: SELECT projects.title, pledges.amount FROM pledges #Telling SQL what we want: select_the_titles of all projects from the projects Table && select pledges.amount from Pledges Table
-# # NOW, join these 2 tables based on the criteria of projects.id being EQUAL to  pledges.project_id
+#  NOW, join these 2 tables based on the criteria of projects.id being EQUAL to  pledges.project_id
 #  JOIN projects ON projects.id = pledges.project_id
-#   #Group by reffers to reformatting returned data as table structure
-#   GROUP BY projects.title
-#    # d, e a, p ODER BY DESC# =>
-#    ORDER BY projects.title;
+#  Group by reffers to reformatting returned data as table structure
+#  GROUP BY projects.title
+#  d, e a, p ODER BY DESC# =>
+#  ORDER BY projects.title;
 end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
 # "Write your SQL query Here"   READ SQL
 "SELECT users.name, users.age, SUM(pledges.amount) FROM users INNER JOIN pledges on users.id = pledges.user_id GROUP BY users.name;"
-
 end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
